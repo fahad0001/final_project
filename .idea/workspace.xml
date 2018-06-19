@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="568df816-5fc3-41d7-a73c-627afd7f90fc" name="Default" comment="" />
+    <list default="true" id="568df816-5fc3-41d7-a73c-627afd7f90fc" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,37 +12,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stores/views.py">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/final_project/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#637#669#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/default/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -66,6 +48,7 @@
         <option value="$PROJECT_DIR$/fyp_ver_1/views.py" />
         <option value="$PROJECT_DIR$/fyp_ver_1/urls.py" />
         <option value="$PROJECT_DIR$/final_project/urls.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -97,32 +80,6 @@
             <path>
               <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="final_project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="final_project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="fyp_ver_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="stores" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="default" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -188,15 +145,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5002764" side_tool="true" weight="0.32879582" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="5" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4997236" weight="0.33717278" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="4" sideWeight="0.4997236" visible="true" weight="0.4627492" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19347706" />
+      <window_info anchor="bottom" id="Python Console" order="5" weight="0.32948583" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4997236" weight="0.33683106" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4997236" visible="true" weight="0.4627492" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19347706" />
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="1" />
@@ -238,25 +196,8 @@
     <entry file="file://$PROJECT_DIR$/stores/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/stores/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fyp_ver_1/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/default/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fyp_ver_1/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -288,6 +229,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stores/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/final_project/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -295,6 +253,13 @@
           <folding>
             <element signature="e#637#669#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
