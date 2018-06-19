@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fyp_ver_1.apps.FypVer1Config',
+    'stores',
+    'products',
 ]
 
 MIDDLEWARE = [
