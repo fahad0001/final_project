@@ -51,6 +51,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'final_project.urls'
+AUTH_USER_MODEL = 'fyp_ver_1.User'
 
 TEMPLATES = [
     {
