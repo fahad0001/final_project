@@ -1,5 +1,6 @@
-#!/home/fahad/Documents/final_project/venv/bin/python
-
+#!/bin/sh
+'''exec' "/home/saifi/Saif project/final_project/venv/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

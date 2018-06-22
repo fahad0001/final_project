@@ -1,0 +1,12 @@
+{% extends 'default/base.html' %}
+<html>
+<head><title>E-Commerce App</title></head>
+{% block content %}
+    <h2>Store Details</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">submit</button>
+  </form>
+{% endblock %}
+</html>

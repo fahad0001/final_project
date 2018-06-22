@@ -27,7 +27,7 @@ def signup(request):
             user.save()
             login(request, user)
 
-            return redirect('index')
+            return redirect('')
     else:
         form = SignUpForm()
     return render(request, 'default/signup.html', {'form': form})

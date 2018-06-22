@@ -1,4 +1,5 @@
-# from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render
+from .forms import NewStore
 # from django.contrib.auth.decorators import login_required
 # from django.core.exceptions import PermissionDenied
 
@@ -6,11 +7,13 @@
 # from .forms import InvitationForm
 # from .models import Invitation
 
-from django.http import HttpResponse
+
+def store(request):
+    form = NewStore()
+    return render(request, "default/store.html", {'form': form})
 
 
-def index(request):
-    return HttpResponse("This is store")
+
 
 
 # @login_required
