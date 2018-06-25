@@ -6,4 +6,3 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     is_Buyer = models.BooleanField(default=False)
     is_Seller = models.BooleanField(default=False)
-

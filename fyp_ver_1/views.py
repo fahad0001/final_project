@@ -27,7 +27,7 @@ def signup(request):
             user.save()
             login(request, user)
 
-            return redirect('')
+            return redirect('stores_list')
     else:
         form = SignUpForm()
     return render(request, 'default/signup.html', {'form': form})
