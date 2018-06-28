@@ -11,6 +11,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30)
     price = models.IntegerField()

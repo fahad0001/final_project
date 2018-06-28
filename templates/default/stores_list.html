@@ -5,7 +5,11 @@
     <h1>Welcome to your profile</h1>
     <h2>Stores List</h2>
     <p>This is your store list</p>
-    <ul><li>1
-    </li></ul>
+
+    <ul>
+        {% for s in my_list %}
+            <li>  <a href="{% url 'store_details' %}"> Store {{ s.id }}: {{ s.name }}</a></li>
+    {% endfor %}
+    </ul>
 {% endblock %}
 </html>

@@ -3,6 +3,9 @@
 <head><title>E-Commerce App</title></head>
 {% block content %}
     <h1>E-Commerce app</h1>
-    <a href="/register">Click to go to store</a>
+    <p>Welcome, {{ user.username }}</p>
+    <a href="/register">
+    <button>Sign up</button>
+    </a>
 {% endblock %}
 </html>

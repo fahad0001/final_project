@@ -54,6 +54,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'final_project.urls'
 AUTH_USER_MODEL = 'fyp_ver_1.User'
+TEMPLATES_CONTEXT_PROCESSORS = 'django.contrib.auth.context_processors.auth'
 
 TEMPLATES = [
     {
@@ -125,3 +126,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = '/home/saifi/Saif_project/final_project/MEDIA_ROOT/upload_to'
+
+LOGIN_REDIRECT_URL = "stores/stores_list"
+LOGOUT_REDIRECT_URL = "index"
+LOGIN_URL = "user_login"

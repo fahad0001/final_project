@@ -8,10 +8,14 @@
 
         <link href="{% static 'stores/stores.css' %} "rel="stylesheet">
     </head>
-    <body>
         <div class="page-header">
-            <a href="{% url 'store' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            <h1><a href="/">SegmentBiz</a></h1>
+        <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'user_logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'user_login' %}">Login</a></li>
+            {% endif %}
+        </ul>            <h1><a href="/">SegmentBiz</a></h1>
         </div>
         <div class="content container">
             <div class="row">

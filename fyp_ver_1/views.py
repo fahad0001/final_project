@@ -7,6 +7,7 @@ from .forms import SignUpForm
 
 
 def index(request):
+
     return render(request, 'default/index.html')
 
 
@@ -31,3 +32,4 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'default/signup.html', {'form': form})
+
