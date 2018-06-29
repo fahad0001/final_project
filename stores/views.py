@@ -1,7 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .forms import NewStore
 from .models import Store
+from products.models import Product
+
 
 
 def store(request):
@@ -22,11 +24,13 @@ def store(request):
 
 @login_required()
 def stores_list(request):
-    my_stores = Store.objects.all().filter(user=request.user)
-    print(my_stores)
-    return render(request, "default/stores_list.html", {'my_list': my_stores})
+    stores = Store.objects.all().filter(user=request.user)
+    return render(request, "default/stores_list.html", {'stores': stores})
 
 
-@login_required()
-def store_details(request):
-    return render(request, "default/store_details.html")
+@login_required
+def store_details(request, store_id):
+    print(store_id)
+    store = get_object_or_404(Store, id=store_id)
+    store_products = store.products.all()
+    return render(request, 'default/store_details.html', {'store': store, 'store_products': store_products})

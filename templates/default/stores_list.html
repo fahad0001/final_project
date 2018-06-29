@@ -1,15 +1,13 @@
 {% extends 'default/base.html' %}
-<html>
+
 <head><title>E-Commerce App</title></head>
 {% block content %}
-    <h1>Welcome to your profile</h1>
+    <h1>Welcome to your profile , {{ user.username }}</h1>
     <h2>Stores List</h2>
     <p>This is your store list</p>
-
     <ul>
-        {% for s in my_list %}
-            <li>  <a href="{% url 'store_details' %}"> Store {{ s.id }}: {{ s.name }}</a></li>
-    {% endfor %}
+        {% for s in stores %}
+            <li>  <a href="{% url 'store_details' s.id %}"> Store {{ s.id }}: {{ s.name }}</a></li>
+        {% endfor %}
     </ul>
 {% endblock %}
-</html>

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from .forms import NewPro
+from .forms import NewPro, Product
+from django.contrib.auth.decorators import login_required
 # Create your views here
 
 
@@ -8,13 +9,17 @@ def pro(request):
     if request.method == 'POST':
         form = NewPro(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            return redirect('stores_list')
+            entry = form.save(commit=False)
+            entry.user = request.user
+            entry.save()
+
+            return redirect('add_products')
 
         else:
             form = NewPro()
     return render(request, "default/add_product.html", {'form': form})
 
 
-def product_list(request):
-    return render(request, 'default/product_list.html')
+@login_required()
+def product(request):
+    return render(request, "default/product_details.html")
