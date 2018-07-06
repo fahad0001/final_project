@@ -1,9 +1,13 @@
-{% extends 'default/base.html' %}
-<html>
-<head><title>E-Commerce App</title></head>
+{% extends 'default/dashboard.html' %}
 {% block content %}
-    <h1>Welcome to your store, {{ user.username }}</h1>
-    <h2>Products list </h2>
-    <p>This is the list of the products that your store contains </p>
+    <h1>Products Details </h1>
+    <p>These are the details of your product, {{ user.username }}</p>
+       <ul>
+       <li>{{ product_details.name }}</li>
+       <li>{{ product_details.price }}</li>
+       <li>{{ product_details.category }}</li>
+       <li>{{ product_details.store }}</li>
+        <li>{{ product_details.user }}</li>
+
+       </ul>
 {% endblock %}
-</html>

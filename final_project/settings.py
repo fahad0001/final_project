@@ -125,6 +125,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_root')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static',),
+)
+
+
 MEDIA_ROOT = '/home/saifi/Saif_project/final_project/MEDIA_ROOT/upload_to'
 
 LOGIN_REDIRECT_URL = "stores/stores_list"

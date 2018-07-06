@@ -7,8 +7,11 @@ from .forms import SignUpForm
 
 
 def index(request):
-
     return render(request, 'default/index.html')
+
+
+def home(request):
+    return render(request, 'Index/home.html')
 
 
 def signup(request):

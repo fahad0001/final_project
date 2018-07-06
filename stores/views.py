@@ -2,10 +2,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .forms import NewStore
 from .models import Store
-from products.models import Product
 
 
-
+@login_required()
 def store(request):
     form = NewStore()
     if request.method == 'POST':
@@ -34,3 +33,7 @@ def store_details(request, store_id):
     store = get_object_or_404(Store, id=store_id)
     store_products = store.products.all()
     return render(request, 'default/store_details.html', {'store': store, 'store_products': store_products})
+
+
+def index_stores(request):
+    return render(request, 'Index/Stores.html')

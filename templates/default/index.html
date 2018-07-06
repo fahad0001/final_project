@@ -1,8 +1,8 @@
-{% extends 'default/base.html' %}
+{% extends 'default/dashboard.html' %}
 <html>
 <head><title>E-Commerce App</title></head>
+{% block title %} <h1>E-Commerce ap</h1>{% endblock %}
 {% block content %}
-    <h1>E-Commerce app</h1>
     <p>Welcome, {{ user.username }}</p>
      <a href="/stores/stores_list">
     <button>Stores list</button>
