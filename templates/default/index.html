@@ -1,13 +1,18 @@
 {% extends 'default/dashboard.html' %}
 <html>
 <head><title>E-Commerce App</title></head>
-{% block title %} <h1>E-Commerce ap</h1>{% endblock %}
+{% block title %} <h1>Welcome to your profile</h1>{% endblock %}
 {% block content %}
-    <p>Welcome, {{ user.username }}</p>
+    <p></p>
+    <ul>
+    <li>Id: {{ user.id }}</li>
+    <li>Username: {{ user.username }}</li>
+    <li>Email: {{ user.email }}</li>
+    </ul>
      <a href="/stores/stores_list">
     <button>Stores list</button>
     </a>
-    <a href="/register">
+    <a href="/home/register">
     <button>Sign up</button>
     </a>
 {% endblock %}

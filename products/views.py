@@ -18,7 +18,7 @@ def pro(request):
 
         else:
             form = NewPro()
-    return render(request, "default/../templates/add_product.html", {'form': form})
+    return render(request, "default/add_product.html", {'form': form})
 
 
 @login_required()
@@ -31,4 +31,4 @@ def product(request, product_id):
 
 
 def index_products(request):
-    return render(request, "Index/Products.html")
+    return render(request, "Index/product_list.html")

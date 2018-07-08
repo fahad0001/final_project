@@ -36,4 +36,9 @@ def store_details(request, store_id):
 
 
 def index_stores(request):
-    return render(request, 'Index/Stores.html')
+    list_stores=Store.objects.all()
+    return render(request, 'Index/store_list.html',{'list_stores': list_stores})
+
+
+def details_store(request):
+    return render(request, 'Index/store.html')

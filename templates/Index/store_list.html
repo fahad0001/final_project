@@ -1,0 +1,11 @@
+{% extends 'Index/home.html' %}
+{% block content %}
+    <div class="container cont">
+    <h1>Hello</h1>
+     <ul>
+        {% for s in list_stores %}
+            <li>  <a href="{% url 'details_store' %}"> Store {{ s.id }}: {{ s.name }}</a></li>
+        {% endfor %}
+    </ul>
+    </div>
+{% endblock %}

@@ -134,6 +134,6 @@ STATICFILES_DIRS = (
 
 MEDIA_ROOT = '/home/saifi/Saif_project/final_project/MEDIA_ROOT/upload_to'
 
-LOGIN_REDIRECT_URL = "stores/stores_list"
-LOGOUT_REDIRECT_URL = "index"
+LOGIN_REDIRECT_URL = "/home"
+LOGOUT_REDIRECT_URL = "/home"
 LOGIN_URL = "user_login"

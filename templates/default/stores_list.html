@@ -10,4 +10,7 @@
             <li>  <a href="{% url 'store_details' s.id %}"> Store {{ s.id }}: {{ s.name }}</a></li>
         {% endfor %}
     </ul>
+    <a href="/stores/">
+    <button>Add Store</button>
+    </a>
 {% endblock %}
