@@ -1,6 +1,10 @@
 {% extends 'Index/home.html' %}
 {% block content %}
     <div class="container cont">
-    <h1>Hello</h1>
+    {% for product in products  %}
+        <ul>
+        <li><a href="{% url 'detail_product' product.id %}"> {{ product.name  }}</a></li>
+        </ul>
+    {% endfor %}
     </div>
 {% endblock %}

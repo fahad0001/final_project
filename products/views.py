@@ -31,4 +31,12 @@ def product(request, product_id):
 
 
 def index_products(request):
-    return render(request, "Index/product_list.html")
+    products = Product.objects.all()
+    return render(request, "Index/product_list.html", {'products': products})
+
+
+def detail_product(request, product_id):
+    detail = get_object_or_404(Product, id=product_id)
+    product_detail = Product.objects.get(id=product_id)
+    print(product_detail)
+    return render(request,"Index/product.html", {'detail':detail, 'product_detail': product_detail})

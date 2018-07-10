@@ -3,16 +3,25 @@
     <div class="container cont">
     <div class="card text-center">
   <div class="card-header">
-    Featured
+    Store Details
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+     <div class="card-body">
+
+    <h2 class="card-title">{{ get_store.name }}</h2>
+    <p class="card-text">{{ get_store.type }}</p>
+
   </div>
   <div class="card-footer text-muted">
     2 days ago
   </div>
 </div>
+    <div class="container cont">
+    <h3>List of the products this store contains</h3>
+     {% for details in store_detail %}
+      <ul>
+     <li><a> {{ details.name }}</a></li>
+      </ul>
+     {% endfor %}
+    </div>
     </div>
 {% endblock %}

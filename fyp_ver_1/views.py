@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from .forms import SignUpForm
+from products.models import Product
 
 
 # Create your views here.
@@ -11,7 +12,8 @@ def index(request):
 
 
 def home(request):
-    return render(request, 'Index/home.html')
+    main_products = Product.objects.all()
+    return render(request, 'Index/home.html', {'main_products': main_products})
 
 
 def signup(request):

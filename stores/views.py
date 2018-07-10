@@ -40,5 +40,8 @@ def index_stores(request):
     return render(request, 'Index/store_list.html',{'list_stores': list_stores})
 
 
-def details_store(request):
-    return render(request, 'Index/store.html')
+def details_store(request, store_id):
+    store = get_object_or_404(Store, id=store_id)
+    store_detail = store.products.all()
+    get_store = Store.objects.get(id=store_id)
+    return render(request, 'Index/store.html', {'store': store, 'store_detail': store_detail, 'get_store': get_store})
