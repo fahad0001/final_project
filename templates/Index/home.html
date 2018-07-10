@@ -52,32 +52,28 @@
       </div>
     </nav>>
 
-{% block content %}
+	{% block content %}
       <!--cards of posts-->
-<div class="container cont">
-<div class="col-lg-12 d-lg-block">
+	<div class="container cont">
+	<div class="col-lg-12 d-lg-block">
 
-  </div>
-   {% for p in main_products %}
-  {% with mod_result=forloop.counter0|divisibleby:4 %}
-    {% if mod_result == 0 %}
-       <div class="body card  col-lg-12 d-lg-block mb-5">
-    {% endif %}
-      <div class="card-deck ml-1 mr-1 mt-3">
-        <div class="card cardset ">
-          <div class="card-body">
-            <img src="../../static/images/cards/istanbul-balat.jpg" class="img-fluid" alt=""/>
-            <h5 class="card-title mt-2">{{ p.name  }}	</h5>
-            <a href="#" class="btn btn-dark btn-sm float-right">Read more...</a>
-          </div>
-        </div>
-      </div>
-    {% if mod_result == 0 %}
-      </div>
-    {% endif %}
-  {% endwith %}
-{% endfor %}
-</div>
+	  </div>
+	   {% for p in main_products %}
+	  {% with mod_result=forloop.counter0|divisibleby:4 %}
+	    {% if mod_result == 0 %}
+	       <br/>
+	    {% endif %}
+		<div class="card" style="width: 18rem;">
+		  <img class="card-img-top" src="..." alt="Card image cap">
+		  <div class="card-body">
+		    <h5 class="card-title">{{ p.name }}</h5>
+		    <p class="card-text">{{ p.name }}</p>
+		    <a href="#" class="btn btn-primary">Read more...</a>
+		  </div>
+		</div>
+	  {% endwith %}
+	{% endfor %}
+	</div>
 
     {% endblock %}
     <!-- MAIN FOOTER -->
