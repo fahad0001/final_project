@@ -22,6 +22,36 @@ def pro(request):
 
 
 @login_required()
+def edit_product(request, product_id):
+    edit = get_object_or_404(Product, pk=product_id)
+    form = NewPro(instance=edit)
+    if request.method == 'POST':
+        form = NewPro(request.POST, request.FILES, instance=edit)
+        if form.is_valid():
+            form.save()
+
+            return redirect('store_details')
+        else:
+            form = NewPro(instance=edit)
+    return render(request, "default/edit.html", {'form': form, 'edit': edit})
+
+
+@login_required()
+def delete_product(request, product_id):
+    delete = get_object_or_404(Product, pk=product_id)
+    form = NewPro(instance=delete)
+    if request.method == 'POST':
+        form = NewPro(request.POST, request.FILES, instance=delete)
+        if form.is_valid():
+            delete.delete()
+
+            return redirect('stores_list')
+    else:
+            form = NewPro(instance=delete)
+    return render(request, "default/product_delete.html", {'form': form, 'delete': delete})
+
+
+@login_required()
 def product(request, product_id):
     print(product_id)
     details = get_object_or_404(Product, id=product_id)

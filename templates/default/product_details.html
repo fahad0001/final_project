@@ -2,12 +2,18 @@
 {% block content %}
     <h1>Products Details </h1>
     <p>These are the details of your product, {{ user.username }}</p>
-       <ul>
-       <li>{{ product_details.name }}</li>
-       <li>{{ product_details.price }}</li>
-       <li>{{ product_details.category }}</li>
-       <li>{{ product_details.store }}</li>
+    <ul>
+        <li>{{ product_details.name }}</li>
+        <li>{{ product_details.price }}</li>
+        <li>{{ product_details.category }}</li>
+        <li>{{ product_details.store }}</li>
         <li>{{ product_details.user }}</li>
 
-       </ul>
+    </ul>
+    <a href={% url 'edit_product' product_details.id %}>
+        <button>Edit Product</button>
+    </a>
+     <a href={% url 'delete_product' product_details.id %}>
+        <button>Delete Product</button>
+    </a>
 {% endblock %}
