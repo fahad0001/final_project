@@ -7,6 +7,7 @@ User = get_user_model()
 class Store(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30)
+    description = models.CharField(max_length=128, null=True)
     lat = models.DecimalField(max_digits=50, decimal_places=20)
     long = models.DecimalField(max_digits=50, decimal_places=20)
     type = models.CharField(max_length=30)

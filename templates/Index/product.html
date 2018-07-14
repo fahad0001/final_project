@@ -2,18 +2,18 @@
 {% block content %}
     <div class="container cont">
 
-<div class="card text-center">
-  <div class="card-header">
-    Featured
-  </div>
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ product_detail.image.url }}" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">{{ product_detail.name }}</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">{{ product_detail.description }}</p>
   </div>
-  <div class="card-footer text-muted">
-    2 days ago
-  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ product_detail.name }}</li>
+    <li class="list-group-item">{{ product_detail.price }}n</li>
+    <li class="list-group-item">{{ product_detail.category }}</li>
+  </ul>
 </div>
+
     </div>
 {% endblock %}

@@ -17,11 +17,20 @@
 </div>
     <div class="container cont">
     <h3>List of the products this store contains</h3>
+    <div class="row">
      {% for details in store_detail %}
-      <ul>
-     <li><a> {{ details.name }}</a></li>
-      </ul>
+       <div>
+          <div class="col-sm-3" style="margin-left: 47px">
+               <div class="card" style="width: 18rem;">
+                  <img class=" img-thumbnail" src="{{ details.image.url }}" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ details.name }}</h5>
+                  </div>
+                </div>
+            </div>
+            </div>
      {% endfor %}
+    </div>
     </div>
     </div>
 {% endblock %}

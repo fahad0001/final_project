@@ -131,6 +131,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static',),
 )
 
+MEDIA_URL = '/media/'
 
 MEDIA_ROOT = '/home/saifi/Saif_project/final_project/MEDIA_ROOT/upload_to'
 

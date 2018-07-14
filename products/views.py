@@ -30,7 +30,7 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
 
-            return redirect('store_details')
+            return redirect('products_details', product_id)
         else:
             form = NewPro(instance=edit)
     return render(request, "default/edit.html", {'form': form, 'edit': edit})
