@@ -10,6 +10,12 @@
     <a href="/products/add_products">
         <button>Add Product</button>
     </a>
+    <a href={% url 'edit_store' store.id %}>
+        <button>Edit Product</button>
+    </a>
+     <a href={% url 'delete_store' store.id %}>
+        <button>Delete Product</button>
+    </a>
 
 
 

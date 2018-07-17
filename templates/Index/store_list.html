@@ -1,11 +1,23 @@
 {% extends 'Index/home.html' %}
 {% block content %}
     <div class="container cont">
-    <h1>Hello</h1>
-     <ul>
-        {% for s in list_stores %}
-            <li>  <a href="{% url 'details_store' s.id %}"> Store: {{ s.name }}</a></li>
-        {% endfor %}
-    </ul>
+        <h1>This is the list of Stores</h1>
+        <table style="width:100%">
+         <tr>
+                <th>Store Name</th>
+                <th>Type</th>
+                <th>Location</th>
+            </tr>
+            {% for s in list_stores %}
+
+            <tr>
+                <td><a href="{% url 'details_store' s.id %}">{{ s.name }}</a></td>
+                <td>{{ s.type }}</td>
+                <td>50</td>
+            </tr>
+             {% endfor %}
+
+        </table>
     </div>
+<br><br><br><br><br><br><br><br><br><br>
 {% endblock %}

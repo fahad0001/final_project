@@ -1,0 +1,11 @@
+{% extends "default/dashboard.html" %}
+{% block content %}
+    <h2>People those who contacted us</h2>
+    {% for c in contacts %}
+        <ul>
+            <li>{{ c.name }}</li>
+        </ul>
+    {% endfor %}
+
+
+{% endblock %}

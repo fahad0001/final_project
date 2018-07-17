@@ -1,0 +1,10 @@
+{% extends "default/dashboard.html" %}
+{% block content %}
+    <h1>Here are the list of products your store have, {{ user.username }}</h1>
+    <h2>Products list </h2>
+    {% for product in products_list %}
+        <ul>
+            <li>{{ product.name }}</li>
+        </ul>
+    {% endfor %}
+{% endblock %}

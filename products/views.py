@@ -60,6 +60,12 @@ def product(request, product_id):
     return render(request, "default/product_details.html", {'details': details, 'product_details': product_details})
 
 
+@login_required()
+def product_list(request):
+    products_list = Product.objects.all().filter(user=request.user)
+    return render(request, "default/product_list.html", {'products_list': products_list})
+
+
 def index_products(request):
     products = Product.objects.all()
     return render(request, "Index/product_list.html", {'products': products})
@@ -70,3 +76,4 @@ def detail_product(request, product_id):
     product_detail = Product.objects.get(id=product_id)
     print(product_detail)
     return render(request,"Index/product.html", {'detail':detail, 'product_detail': product_detail})
+

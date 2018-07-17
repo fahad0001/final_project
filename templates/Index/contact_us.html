@@ -1,0 +1,14 @@
+{% extends 'Index/home.html' %}
+<html>
+<head><title>E-Commerce App</title></head>
+{% block content %}
+    <div class="container cont">
+        <h2>Contact Us</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">submit</button>
+        </form>
+    </div>
+{% endblock %}
+</html>

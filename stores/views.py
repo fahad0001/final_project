@@ -22,6 +22,37 @@ def store(request):
 
 
 @login_required()
+def edit_store(request, store_id):
+    edit = get_object_or_404(Store, pk=store_id)
+    form = NewStore(instance=edit)
+    if request.method == 'POST':
+        form = NewStore(request.POST, request.FILES, instance=edit)
+        if form.is_valid():
+            form.save()
+
+            return redirect('store_details', store_id)
+        else:
+            form = NewStore(instance=edit)
+    return render(request, "default/edit_store.html", {'form': form, 'edit': edit})
+
+
+
+@login_required()
+def delete_product(request, store_id):
+    delete = get_object_or_404(Store, pk=store_id)
+    form = NewStore(instance=delete)
+    if request.method == 'POST':
+        form = NewStore(request.POST, instance=delete)
+        if form.is_valid():
+            delete.delete()
+
+            return redirect('stores_list')
+    else:
+            form = NewStore(instance=delete)
+    return render(request, "default/delete_store.html", {'form': form, 'delete': delete})
+
+
+@login_required()
 def stores_list(request):
     stores = Store.objects.all().filter(user=request.user)
     return render(request, "default/stores_list.html", {'stores': stores})
